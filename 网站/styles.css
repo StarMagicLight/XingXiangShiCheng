@@ -60,16 +60,6 @@ nav ul li a {
     overflow: hidden;
 }
 
-.slider {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-}
-
 .categories,
 .featured-products {
     padding: 20px;
