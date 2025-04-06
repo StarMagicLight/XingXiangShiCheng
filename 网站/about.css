@@ -1,0 +1,110 @@
+/* 关于我们页面样式 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-size: 18px;
+}
+
+.section-title {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.en-title {
+    display: block;
+    font-size: 1.3rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* 关于我们部分 */
+.about-section {
+    margin-bottom: 4rem;
+}
+
+.persimmon-display {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.persimmon-display img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* 使命部分 */
+.mission-section {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+    background-color: #FFF8E1;
+}
+
+.mission-map {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.mission-map img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mission-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* 为什么选择我们部分 */
+.why-us-section {
+    margin-bottom: 4rem;
+}
+
+.why-us-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+    color: #333;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .en-title {
+        font-size: 1.1rem;
+    }
+
+    .about-text,
+    .mission-text,
+    .why-us-text {
+        padding: 0 1rem;
+        font-size: 1.1rem;
+    }
+
+    .mission-section {
+        padding: 1rem;
+    }
+} 
