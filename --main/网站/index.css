@@ -1,0 +1,356 @@
+/* 英雄区域 */
+.hero {
+    position: relative;
+    color: #E87423;
+    padding: 0;
+    text-align: center;
+    min-height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color:#E87423;
+}
+
+.hero::before {
+    content: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+
+.hero-image h1 {
+    position: relative;
+    z-index: 3;
+    font-size: 4.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: -100px;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.main-title img {
+    display: none;
+}
+
+/* 服务卡片区域 */
+.main-services {
+    background: linear-gradient(135deg, #E87423 0%, white 0%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #E87423;
+    color: white;
+    padding: 4rem;
+    border-radius: 20px;
+    text-align: center;
+    width: 280px;
+    flex: 1 1 280px;
+    min-width: 250px;
+    max-width: 100%;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    height: 200%;
+}
+
+.service-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.service-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.card-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #712e1f;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(255,107,74,0.5);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+/* 产品展示区域 */
+.product-showcase {
+    padding: 3rem 0;
+    background-color: #FFF;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.product-grid img {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex: 1 1 200px;
+    min-width: 150px;
+    max-width: 100%;
+}
+
+/* 联系我们区域 */
+.contact-section {
+    background-color: #FFF8F0;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact-form input {
+    padding: 0.8rem;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+/* 缩小地图容器和图片，图片宽度700px，高度不变，居中 */
+.map-container {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    background-color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.map-container img {
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 页脚 */
+.main-footer {
+    background-color: #E87423;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 响应式媒体查询 */
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .service-cards {
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .service-card {
+        min-width: 100%;
+    }
+
+    .product-grid img {
+        min-width: 100%;
+    }
+
+    .top-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact-form input {
+        width: 100%;
+    }
+}
+
+/* 平板设备优化 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .service-cards {
+        justify-content: space-around;
+    }
+
+    .product-grid {
+        justify-content: space-around;
+    }
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+}
