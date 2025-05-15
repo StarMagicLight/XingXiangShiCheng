@@ -4,7 +4,7 @@
     height: 500px;
     overflow: hidden;
     margin: 30px auto;
-    border: 2px solid #f6efe6;
+    border: 2px solid #f5e6d3;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -241,6 +241,25 @@
     line-height: 1.5;
 }
 
-a {
+.book-btn {
+    display: inline-block;
+    background: #b85c00;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 22px;
+    border-radius: 22px;
+    text-align: center;
     text-decoration: none;
+    box-shadow: 0 2px 8px rgba(184, 92, 0, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    margin: 18px 0 0 0;
+    min-width: 120px;
+}
+
+.book-btn:hover {
+    background: #a04a00;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(184, 92, 0, 0.15);
 }
