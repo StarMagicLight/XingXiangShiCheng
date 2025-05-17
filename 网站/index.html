@@ -5,30 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>荥想柿成 - 首页</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    
+     link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
 </head>
 
+
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
-                <li class="nav-item"><a href="products1.html" class="nav-link">产品服务</a></li>
-                <li class="nav-item"><a href="new.html" class="nav-link">活动中心</a></li>
+    script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>  
+    <header class="main-header">
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="products.html">产品服务</a></li>
+                <li><a href="new.html">活动中心</a></li>
             </ul>
-        </div>
-    </nav>
-    <div class="top-image">
-        <img src="产品服务/题头图.jpg" alt="顶部图片">
-    </div>
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="荥想柿成">
+               </div>
+        </nav>
+    </header>
+
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-image">
-                <img src="images/i.png" alt="柿子图片">
-                <h1>荥想柿成</h1>
+            <div class="hero-text">
+                 <h1>荥想柿成</h1>
+                <div class="hero-subtitle"><p>非遗文旅助力三农，打造荥阳品牌强柿</p>
+                    <div class="hero-colors">
+                        <span class="color1"></span>
+                        <span class="color2"></span>
+                        <span class="color3"></span>
+                        <span class="color4"></span>
+                    </div>
+            <div class="hero-search">
+                <input type="text" placeholder="搜索">
+                <span class="search-icon">🔍</span>
             </div>
         </div>
     </section>
@@ -76,12 +89,51 @@
             <input type="text" placeholder="您的姓名">
             <input type="text" placeholder="联系方式">
         </div>
-        <div class="map-container">
-            <img src="images/map.png" alt="地图">
+<head>
+    <style>
+	    #container{
+		    width: 1600px;
+		    height: 400px;
+           align-items:center;
+	    }
+    </style>
+</head>
+ 
+<body>
+    <!-- 一、新建一个容器 -->
+    <div id="container" ></div>
+</body>
+ 
+<!--三、引入高德地图的js-->
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key="></script>
+ 
+<!--四、异步初始化高德地图插件-->
+<script>
+	//初始化地图插件
+	window.onload = function(){
+	    var map = new AMap.Map("container", {
+            zoom: 15, //设置地图显示的缩放级别
+            center: [113.38564,34.638289] //设置地图中心点坐标
+         });
+ 
+         // 创建一个 Marker 实例：（标记点）
+        var marker = new AMap.Marker({
+           position: new AMap.LngLat(113.38564,34.638289), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+           title: "位置标题"
+        });
+ 
+       // 将创建的点标记添加到已有的地图实例：
+       map.add(marker);
+	}
+</script>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p style="text-align: center;font-size: 1.5rem;">&copy; 2025 荥想柿成 保留所有权利</p>
+            <div class="footer-logo">
+             <img src="images/logo.png" alt="荥想柿成">
+            </div>
         </div>
-    </section>
-
-
+    </footer>
 </body>
 
 </html>

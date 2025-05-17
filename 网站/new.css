@@ -4,7 +4,7 @@
     height: 500px;
     overflow: hidden;
     margin: 30px auto;
-    border: 2px solid #f5e6d3;
+    border: 2px solid #f6efe6;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -239,6 +239,10 @@
     color: #666;
     font-size: 14px;
     line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
 }
 
 .book-btn {

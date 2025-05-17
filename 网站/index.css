@@ -1,22 +1,20 @@
 /* 英雄区域 */
-
 .hero {
     position: relative;
-    color: #E87423;
     padding: 0;
-    text-align: center;
-    min-height: 500px;
-    width: 100%;
-    margin: 0 auto;
+    text-align: right;
+    height: 550px;
+    width: auto;
+    margin: 0 ;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     overflow: hidden;
-    background-color: #E87423;
+    background: url('images/i.png') ;
+    background-position: bottom ;
+    background-size: cover;
 }
 
-.hero::before {
-    content: none;
-}
 
 .hero-content {
     position: relative;
@@ -24,44 +22,81 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: right;
     background: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500px;
-    z-index: 2;
+.hero-text {
+    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+    margin-left: 18rem;
+}
+
+.hero-text h1 {
+    font-size: 8rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.12);
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    color: #8B5C2A;
+    margin-bottom: 1.5rem;
+}
+
+.hero-colors {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    float: right;
+}
+
+.hero-colors span {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.hero-colors .color1 { background: #F6A940; }
+.hero-colors .color2 { background: #E87423; }
+.hero-colors .color3 { background: #712e1f; }
+.hero-colors .color4 { background: #4B8B2B; }
+
+.hero-search {
+    margin-top: 2rem;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.5rem 1.5rem;
+    float: right;
+}
+
+.hero-search input {
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    flex: 1;
     background: transparent;
+    padding: 0.7rem 0;
 }
 
-.hero-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 1;
-    mix-blend-mode: multiply;
-}
-
-.hero-image h1 {
-    position: relative;
-    z-index: 3;
-    font-size: 4.5rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: -100px;
+.hero-search .search-icon {
+    font-size: 1.3rem;
+    color: #E87423;
+    margin-left: 0.5rem;
 }
 
 .main-title {
@@ -79,9 +114,7 @@
     display: none;
 }
 
-
 /* 服务卡片区域 */
-
 .main-services {
     background: linear-gradient(135deg, #E87423 0%, white 0%);
     padding: 4rem 0;
@@ -96,7 +129,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
 }
 
 .service-cards {
@@ -121,7 +154,7 @@
     max-width: 100%;
     position: relative;
     transition: transform 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .service-card:hover {
@@ -144,7 +177,7 @@
 .service-card p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255,255,255,0.9);
 }
 
 .card-dot {
@@ -156,7 +189,7 @@
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 10px rgba(255, 107, 74, 0.5);
+    box-shadow: 0 0 10px rgba(255,107,74,0.5);
 }
 
 .service-card::before {
@@ -166,14 +199,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
     border-radius: 20px;
     pointer-events: none;
 }
 
-
 /* 产品展示区域 */
-
 .product-showcase {
     padding: 3rem 0;
     background-color: #FFF;
@@ -199,9 +230,7 @@
     max-width: 100%;
 }
 
-
 /* 联系我们区域 */
-
 .contact-section {
     background-color: #FFF8F0;
     padding: 3rem 0;
@@ -234,9 +263,7 @@
     border-radius: 5px;
 }
 
-
 /* 缩小地图容器和图片，图片宽度700px，高度不变，居中 */
-
 .map-container {
     max-width: 720px;
     margin: 2rem auto;
@@ -247,7 +274,6 @@
     align-items: center;
     border-radius: 10px;
 }
-
 .map-container img {
     width: 700px;
     max-width: 100%;
@@ -255,23 +281,25 @@
     display: block;
 }
 
-
 /* 响应式媒体查询 */
-
 @media screen and (max-width: 768px) {
     .main-title {
         font-size: 3rem;
     }
+
     .service-cards {
         gap: 1rem;
     }
+
     .service-card {
         padding: 1.5rem;
     }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-nav {
         justify-content: center;
         margin-bottom: 1rem;
@@ -282,39 +310,62 @@
     .main-title {
         font-size: 2rem;
     }
+
     .hero {
         min-height: 400px;
     }
+
     .hero-image {
         height: 400px;
     }
+
     .service-card {
         min-width: 100%;
     }
+
     .product-grid img {
         min-width: 100%;
     }
+
     .top-nav ul {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
     }
+
     .contact-form input {
         width: 100%;
     }
 }
 
-
 /* 平板设备优化 */
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .service-cards {
         justify-content: space-around;
     }
+
     .product-grid {
         justify-content: space-around;
     }
+
     .main-title {
         font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    .hero-image, .hero-text {
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+    }
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .hero-search {
+        width: 90%;
     }
 }
