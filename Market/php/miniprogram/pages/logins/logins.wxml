@@ -1,0 +1,30 @@
+<!-- 底部弹窗动画的内容 -->
+<form bindsubmit="getUserProfile">
+<view class='pupContent {{click? "showContent": "hideContent"}} {{option? "open": "closes"}}' hover-stop-propagation='true'>
+  <image src="../../images/logonsgb.png" catchtap="setCloses"></image>
+  <view class="pupContent-body">
+    <view class="pupContent-head">
+      <image src="{{ logoimg }}"></image>
+      <view>需填入以下信息快捷登录：</view>
+    </view>
+    
+    
+    <view class="pupContent-con">
+      <button class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+      </button> 
+      <input name="nickname" type="nickname" style="border: 1px solid #ccc;" placeholder="请输入昵称" value="{{nickname}}" />
+      
+    </view>
+
+    <view>
+      <button class="pupContent-btn"  class="login-btn" form-type='submit'  style="background-color: #1AAD19; border-radius:10rpx;height:46px;display:flex;justify-content:center;align-items: center;" >确定</button>
+    </view>
+  </view>
+
+
+</view>
+<!-- 固定的背景 -->
+<view class='pupContentBG {{click?"showBG":"hideBG"}} {{option?"openBG":"closeBG"}}' catchtap='clickPup' catchtouchmove="myCatchTouch">
+</view>
+</form>
